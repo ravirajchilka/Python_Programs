@@ -24,11 +24,21 @@ class Stats:
                     modes.append(value)
         return modes
     
+    def find_modal(self):
+        count = 0
+        modal = []
+        for value in self.nums_array:
+            if(self.nums_array.count(value) >1):
+                if(count < self.nums_array.count(value)):
+                    count = self.nums_array.count(value)
+                    modal.append(value)
+        return modal    
 
 
-stat = Stats([],0,7)
+stat = Stats([],0,10)
 print("Mean: ",stat.find_mean())
-print("repeated",stat.find_mode())
+print("Mode: ",stat.find_mode())
+print("Modal: ",stat.find_modal())
 
 
 
