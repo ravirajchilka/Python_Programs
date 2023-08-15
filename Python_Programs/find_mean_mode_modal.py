@@ -28,7 +28,7 @@ class Stats:
         count = 0
         modal = []
         for value in self.nums_array:
-            if(self.nums_array.count(value) >1):
+            if(self.nums_array.count(value) > 1):
                 if(count < self.nums_array.count(value)):
                     count = self.nums_array.count(value)
                     modal.append(value)
